@@ -68,13 +68,13 @@ class ContaBanco{
         if ($this->getStatus()){
             if ($this->getTipo()=='cc' && $this->getSaldo()>=12){
                 $this->setSaldo($this->getSaldo()-12);
-                echo "<p>Mensalidade de R$12 cobrada com sucesso!</p>";
+                echo "<p>Mensalidade de R$12 cobrada com sucesso na conta {$this->getNumConta()}</p>";
             }
             else if ($this->getTipo()=='cc' && $this->getSaldo()<12)
                 echo "<p>Mensalidade de R$12 não cobrada! Saldo insuficiente!</p>";
             if ($this->getTipo()=='cp' && $this->getSaldo()>=20){
                 $this->setSaldo($this->getSaldo()-20);
-                echo "<p>Mensalidade de R$20 cobrada com sucesso!</p>";
+                echo "<p>Mensalidade de R$20 cobrada com sucesso na conta {$this->getNumConta()}</p>";
             }
             else if ($this->getTipo()=='cc' && $this->getSaldo()<20)
                 echo "<p>Mensalidade de R$20 não cobrada! Saldo insuficiente!</p>";

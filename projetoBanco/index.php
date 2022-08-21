@@ -9,6 +9,7 @@
         p{
             border: 1px solid black;
             width: fit-content;
+            font-family: 'Courier New', Courier, monospace;
         }
     </style>
 </head>
