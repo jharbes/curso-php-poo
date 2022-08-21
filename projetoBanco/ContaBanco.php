@@ -31,7 +31,7 @@ class ContaBanco{
     }
 
     public function consultaSaldo(){
-        echo $this->getStatus()?"<p>O saldo da conta de número $this->numConta é de R$ {$this->getSaldo()}":"Acesso não autorizado! Conta não está ativa!";
+        echo $this->getStatus()?"<p>O saldo da conta de número $this->numConta é de R$ {$this->getSaldo()}":"<p><strong>Acesso não autorizado! Conta não está ativa!</strong></p>";
     }
 
     public function fecharConta(){
@@ -45,7 +45,7 @@ class ContaBanco{
     }
 
     public function depositar($valor){
-        if ($this->getStatus()==true){
+        if ($this->getStatus()){
             $this->setSaldo($this->getSaldo()+$valor);
             echo "<p>Depósito de $valor reais na conta $this->numConta efetivado com sucesso!";
         }
@@ -54,18 +54,18 @@ class ContaBanco{
     }
 
     public function sacar($valor){
-        if ($this->getStatus()==true && $this->getSaldo()>=$valor){
+        if ($this->getStatus() && $this->getSaldo()>=$valor){
             $this->setSaldo($this->getSaldo()-$valor);
             echo "<p>Saque de $valor reais na conta $this->numConta efetivado com sucesso!";
         }
-        else if ($this->getSaldo()<$valor && $this->getStatus()==true)
+        else if ($this->getSaldo()<$valor && $this->getStatus())
             echo "<p>Saque negado, saldo insuficiente!</p>";
         else if ($this->getStatus()==false)
             echo "<p>Saque negado, conta está encerrada!</p>";
     }
 
     public function pagarMensal(){
-        if ($this->getStatus()==true){
+        if ($this->getStatus()){
             if ($this->getTipo()=='cc' && $this->getSaldo()>=12){
                 $this->setSaldo($this->getSaldo()-12);
                 echo "<p>Mensalidade de R$12 cobrada com sucesso!</p>";
