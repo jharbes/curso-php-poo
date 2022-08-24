@@ -32,10 +32,9 @@ class ControleRemoto implements Controlador{
 
     public function abrirMenu(){
         if ($this->getLigado()){
-            echo "<p>Aparelho está tocando: ".$this->getTocando()?'SIM':'NAO'."</p>";
-            echo "<p>VOLUME:</p>";
-            echo "<p>";
-            for ($i=0;$i<=$this->getVolume();$i+=10)
+            echo "<p>Aparelho está tocando: ";echo $this->getTocando()?'SIM ':'NAO '."</p>";
+            echo "<p>VOLUME:";
+            for ($i=0;$i<=$this->getVolume();$i+=5)
                 echo "|";
             echo "</p>";
         }
@@ -51,14 +50,14 @@ class ControleRemoto implements Controlador{
     }
 
     public function maisVolume(){
-        if ($this->getLigado() && $this->getVolume()<50){
+        if ($this->getLigado() && $this->getVolume()<100){
             $this->setVolume($this->getVolume()+5);
-            echo "<p>";
-            for ($i=0;$i<=$this->getVolume();$i+=10)
+            echo "<p>VOLUME:";
+            for ($i=0;$i<=$this->getVolume();$i+=5)
                 echo "|";
             echo "</p>";
         }
-        else if ($this->getVolume()>=50)
+        else if ($this->getVolume()>=100)
             echo "<p>Volume já está no máximo!</p>";
         else
             echo "<p>Aparelho desligado!</p>";
@@ -67,8 +66,8 @@ class ControleRemoto implements Controlador{
     public function menosVolume(){
         if ($this->getLigado() && $this->getVolume()>0){
             $this->setVolume($this->getVolume()-5);
-            echo "<p>";
-            for ($i=0;$i<=$this->getVolume();$i+=10)
+            echo "<p>VOLUME:";
+            for ($i=0;$i<=$this->getVolume();$i+=5)
                 echo "|";
             echo "</p>";
         }
@@ -82,8 +81,8 @@ class ControleRemoto implements Controlador{
     {
         if ($this->getLigado() && $this->getVolume()>0){
             $this->setVolume(0);
-            echo "<p>";
-            for ($i=0;$i<=$this->getVolume();$i+=10)
+            echo "<p>VOLUME:";
+            for ($i=0;$i<=$this->getVolume();$i+=5)
                 echo "|";
             echo "</p>";
         }
@@ -97,8 +96,8 @@ class ControleRemoto implements Controlador{
     {
         if ($this->getLigado() && $this->getVolume()==0){
             $this->setVolume(50);
-            echo "<p>";
-            for ($i=0;$i<=$this->getVolume();$i+=10)
+            echo "<p>VOLUME:";
+            for ($i=0;$i<=$this->getVolume();$i+=5)
                 echo "|";
             echo "</p>";
         }
@@ -136,7 +135,7 @@ class ControleRemoto implements Controlador{
     /**
      * Get the value of volume
      */ 
-    public function getVolume()
+    private function getVolume()
     {
         return $this->volume;
     }
@@ -146,7 +145,7 @@ class ControleRemoto implements Controlador{
      *
      * @return  self
      */ 
-    public function setVolume($volume)
+    private function setVolume($volume)
     {
         $this->volume = $volume;
 
@@ -156,7 +155,7 @@ class ControleRemoto implements Controlador{
     /**
      * Get the value of ligado
      */ 
-    public function getLigado()
+    private function getLigado()
     {
         return $this->ligado;
     }
@@ -166,7 +165,7 @@ class ControleRemoto implements Controlador{
      *
      * @return  self
      */ 
-    public function setLigado($ligado)
+    private function setLigado($ligado)
     {
         $this->ligado = $ligado;
 
@@ -176,7 +175,7 @@ class ControleRemoto implements Controlador{
     /**
      * Get the value of tocando
      */ 
-    public function getTocando()
+    private function getTocando()
     {
         return $this->tocando;
     }
@@ -186,7 +185,7 @@ class ControleRemoto implements Controlador{
      *
      * @return  self
      */ 
-    public function setTocando($tocando)
+    private function setTocando($tocando)
     {
         $this->tocando = $tocando;
 
