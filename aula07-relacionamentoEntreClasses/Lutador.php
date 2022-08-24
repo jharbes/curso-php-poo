@@ -25,7 +25,7 @@ class Lutador{
     }
 
     public function apresentar(){
-        echo "<h3>Lutador: {$this->getNome()}</h3>";
+        echo "<h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
         echo "<p>Origem: {$this->getNacionalidade()}<br>";
         echo "{$this->getIdade()} anos<br>";
         echo "{$this->getAltura()}m de altura<br>";
@@ -36,7 +36,7 @@ class Lutador{
     }
 
     public function status(){
-        echo "<h3>Lutador: {$this->getNome()}</h3>";
+        echo "<h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
         echo "<p>É um peso {$this->getCategoria()}<br>";
         echo "{$this->getVitorias()} vitórias<br>";
         echo "{$this->getEmpates()} empates<br>";
