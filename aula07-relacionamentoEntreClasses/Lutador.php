@@ -5,14 +5,14 @@ class Lutador{
     private $nome;
     private $nacionalidade;
     private $idade;
-    private $peso;
     private $altura;
+    private $peso;
     private $categoria;
     private $vitorias;
     private $empates;
     private $derrotas;
 
-    public function __construct($nome,$nacionalidade,$idade,$peso,$altura,$vitorias,$empates,$derrotas)
+    public function __construct($nome,$nacionalidade,$idade,$altura,$peso,$vitorias,$empates,$derrotas)
     {
         $this->setNome($nome);
         $this->setNacionalidade($nacionalidade);
@@ -36,7 +36,11 @@ class Lutador{
     }
 
     public function status(){
-
+        echo "<h3>Lutador: {$this->getNome()}</h3>";
+        echo "<p>É um peso {$this->getCategoria()}<br>";
+        echo "{$this->getVitorias()} vitórias<br>";
+        echo "{$this->getEmpates()} empates<br>";
+        echo "{$this->getDerrotas()} derrotas</p>";
     }
 
     public function ganharLuta(){
