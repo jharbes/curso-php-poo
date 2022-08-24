@@ -120,6 +120,16 @@ class Lutador{
     public function setPeso($peso)
     {
         $this->peso = $peso;
+        if ($this->getPeso()<52.2)
+            $this->setCategoria("INVÁLIDO");
+        else if ($this->getPeso()<=70.3)
+            $this->setCategoria("LEVE");
+        else if ($this->getPeso()<=83.9)
+            $this->setCategoria("MÉDIO");
+        else if ($this->getPeso()<=120.2)
+            $this->setCategoria("PESADO");
+        else
+            $this->setCategoria("INVÁLIDO");
 
         return $this;
     }
@@ -157,7 +167,7 @@ class Lutador{
      *
      * @return  self
      */ 
-    public function setCategoria($categoria)
+    private function setCategoria($categoria)
     {
         $this->categoria = $categoria;
 
