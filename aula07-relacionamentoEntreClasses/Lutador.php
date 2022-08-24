@@ -25,7 +25,14 @@ class Lutador{
     }
 
     public function apresentar(){
-
+        echo "<h3>Lutador: {$this->getNome()}</h3>";
+        echo "<p>Origem: {$this->getNacionalidade()}<br>";
+        echo "{$this->getIdade()} anos<br>";
+        echo "{$this->getAltura()}m de altura<br>";
+        echo "Pesando {$this->getPeso()}kg<br>";
+        echo "{$this->getVitorias()} vitórias<br>";
+        echo "{$this->getEmpates()} empates<br>";
+        echo "{$this->getDerrotas()} derrotas</p>";
     }
 
     public function status(){
@@ -33,15 +40,18 @@ class Lutador{
     }
 
     public function ganharLuta(){
-
+        echo "<p>{$this->getNome()} venceu a luta!</p>";
+        $this->setVitorias($this->getVitorias()+1);
     }
 
     public function perderLuta(){
-
+        echo "<p>{$this->getNome()} perdeu a luta!</p>";
+        $this->setDerrotas($this->getDerrotas()+1);
     }
 
     public function empatarLuta(){
-
+        echo "<p>{$this->getNome()} empatou a luta!</p>";
+        $this->setEmpates($this->getEmpates()+1);
     }
 
     /**
