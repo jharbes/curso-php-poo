@@ -12,7 +12,7 @@ class Lutador{
     private $empates;
     private $derrotas;
 
-    public function __construct($nome,$nacionalidade,$idade,$altura,$peso,$vitorias,$empates,$derrotas)
+    public function __construct($nome,$nacionalidade,$idade,$altura,$peso,$vitorias,$derrotas,$empates)
     {
         $this->setNome($nome);
         $this->setNacionalidade($nacionalidade);
@@ -25,22 +25,22 @@ class Lutador{
     }
 
     public function apresentar(){
-        echo "<h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
+        echo "<div><h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
         echo "<p>Origem: {$this->getNacionalidade()}<br>";
         echo "{$this->getIdade()} anos<br>";
         echo "{$this->getAltura()}m de altura<br>";
         echo "Pesando {$this->getPeso()}kg<br>";
         echo "{$this->getVitorias()} vitórias<br>";
         echo "{$this->getEmpates()} empates<br>";
-        echo "{$this->getDerrotas()} derrotas</p>";
+        echo "{$this->getDerrotas()} derrotas</p></div>";
     }
 
     public function status(){
-        echo "<h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
+        echo "<div><h3 class='titulo'>Lutador: {$this->getNome()}</h3>";
         echo "<p>É um peso {$this->getCategoria()}<br>";
         echo "{$this->getVitorias()} vitórias<br>";
         echo "{$this->getEmpates()} empates<br>";
-        echo "{$this->getDerrotas()} derrotas</p>";
+        echo "{$this->getDerrotas()} derrotas</p></div>";
     }
 
     public function ganharLuta(){

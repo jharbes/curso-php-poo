@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        h3.titulo{
-            margin-bottom: -10px;
-        }
-        p{
+        div{
             border: 1px solid black;
             width: fit-content;
+            margin: 10px;
+            background-color: darkgrey;
+        }
+        h3.titulo{
+            margin: 0px;
+        }
+        p{
+            width: fit-content;
+            margin: 0px;
         }
     </style>    
 </head>
@@ -29,6 +35,9 @@ $l[]=new Lutador("Nerdaard",'EUA',30,1.81,105.7,12,2,4);
 
 $l[0]->apresentar();
 $l[1]->status();
+$l[3]->perderLuta();
+
+$l[3]->apresentar();
 
 var_dump($l);
 
