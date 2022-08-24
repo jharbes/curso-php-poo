@@ -9,8 +9,11 @@
 <body>
 <h1>Curso de PHP-POO</h1>
 <?php
-    require_once 'ControleRemoto.php'
-    
+    require_once 'ControleRemoto.php';
+
+    $c1=new Controlador;
+
+    $c1->ligar();
 ?>
 </body>
 </html>
