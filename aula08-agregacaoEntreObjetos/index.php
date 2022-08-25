@@ -25,6 +25,7 @@
 <h1>Curso de PHP-POO</h1>
 <?php
 require_once 'Lutador.php';
+require_once 'Luta.php';
 
 $l[]=new Lutador('Pretty Boy','França',31,1.75,68.9,11,3,1);
 $l[]=new Lutador("Putscript","Brasil",29,1.68,57.8,14,2,3);
@@ -39,7 +40,11 @@ $l[3]->perderLuta();
 
 $l[3]->apresentar();
 
+$luta[]=new Luta;
+$luta[0]->marcarLuta($l[0],$l[1]);
+
 var_dump($l);
+var_dump($luta);
 
 ?>
 </body>
