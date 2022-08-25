@@ -42,6 +42,7 @@ $l[3]->apresentar();
 
 $luta[]=new Luta;
 $luta[0]->marcarLuta($l[0],$l[1]);
+$luta[0]->lutar();
 
 var_dump($l);
 var_dump($luta);

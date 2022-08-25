@@ -16,12 +16,44 @@ class Luta{
 
     public function marcarLuta($l1,$l2){
         if ($l1->getCategoria()==$l2->getCategoria() && $l1!=$l2){
-            $this->setAprovada(false);
+            $this->setAprovada(true);
             $this->setDesafiado($l1);
             $this->setDesafiante($l2);
             echo "<h3>Luta entre ".$l1->getNome()." e ".$l2->getNome()." marcada!</h3>";
         }else{
             echo "<p>Luta não marcada! Favor verificar os dados e tentar novamente!</p>";
+        }
+    }
+
+    public function lutar(){
+        if ($this->getAprovada()){
+            echo "<hr>";
+            echo "<h2>A LUTA VAI COMEÇAR!</h2>";
+            $this->getDesafiado()->apresentar();
+            $this->getDesafiante()->apresentar();
+            switch(rand(0,2)){
+                case 0:
+                    echo "<h2>EMPATE!</h2>";
+                    $this->getDesafiado()->empatarLuta();
+                    $this->getDesafiante()->empatarLuta();
+                    break;
+                case 1:
+                    echo "<h2>O desafiado {$this->getDesafiado()->getNome()} venceu!</h2>";
+                    $this->getDesafiado()->ganharLuta();
+                    $this->getDesafiante()->perderLuta();
+                    break;
+                case 2:
+                    echo "<h2>O desafiante {$this->getDesafiante()->getNome()} venceu!</h2>";
+                    $this->getDesafiado()->perderLuta();
+                    $this->getDesafiante()->ganharLuta();
+                    break;
+                default:
+                    echo "ERRO!";
+            }
+            echo "<hr>";
+        }
+        else{
+            echo "<h2>Luta não pode ocorrer!</h2>";
         }
     }
 
