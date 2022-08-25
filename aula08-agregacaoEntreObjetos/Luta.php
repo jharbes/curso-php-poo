@@ -19,9 +19,9 @@ class Luta{
             $this->setAprovada(true);
             $this->setDesafiado($l1);
             $this->setDesafiante($l2);
-            echo "<h3>Luta entre ".$l1->getNome()." e ".$l2->getNome()." marcada!</h3>";
+            echo "<h2>Luta entre ".$l1->getNome()." e ".$l2->getNome()." marcada!</h2>";
         }else{
-            echo "<p>Luta não marcada! Favor verificar os dados e tentar novamente!</p>";
+            echo "<h2>Luta não marcada! Favor verificar os dados e tentar novamente!</h2>";
         }
     }
 

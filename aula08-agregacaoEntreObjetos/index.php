@@ -44,6 +44,12 @@ $luta[]=new Luta;
 $luta[0]->marcarLuta($l[0],$l[1]);
 $luta[0]->lutar();
 
+$luta[]=new Luta;
+$luta[1]->marcarLuta($l[2],$l[5]);
+
+$luta[1]->marcarLuta($l[2],$l[3]);
+$luta[1]->lutar();
+
 var_dump($l);
 var_dump($luta);
 
