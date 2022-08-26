@@ -12,28 +12,76 @@ class Livro implements Publicacao{
     private $aberto;
     private $leitor;
 
+    public function __construct($titulo,$autor,$totPaginas)
+    {
+        $this->titulo=$titulo;
+        $this->autor=$autor;
+        $this->totPaginas=$totPaginas;
+        $this->pagAtual=0;
+        $this->aberto=false;
+        echo "<p>LIVRO {$this->getTitulo()} cadastrado com sucesso!</p>";
+    }
+
     public function detalhes(){
-        
+        echo "<hr><h3>Livro: $this->titulo<h3>";
+        echo "<p>autor: $this->autor<br>";
+        echo "totPaginas: $this->totPaginas<br>";
+        echo "pagAtual: {$this->getPagAtual()}<br>";
+        echo $this->getAberto()?"aberto: SIM<br>":"aberto: NÃO<br>";
+        echo $this->getLeitor()!=null?"leitor: {$this->getLeitor()->getNome()}</p><hr>":"leitor: N/A";
     }
 
     public function abrir(){
-
+        if (!$this->getAberto()){
+            echo "<p>Livro {$this->getTitulo()} foi aberto!</p>";
+            $this->setAberto(true);
+            $this->setPagAtual(1);
+        }
+        else{
+            echo "<p>Livro {$this->getTitulo()} já está aberto!</p>";
+        }
     }
 
     public function fechar(){
-
+        if ($this->getAberto()){
+            echo "<p>Livro {$this->getTitulo()} foi fechado!</p>";
+            $this->setAberto(false);
+            $this->setPagAtual(0);
+        }
+        else{
+            echo "<p>Livro {$this->getTitulo()} já está fechado!</p>";
+        }
     }
 
-    public function folhear(){
-
+    public function folhear($pagina){
+        if ($this->getAberto()){
+            echo "<p>Livro {$this->getTitulo()} agora na página de número $pagina.</p>";
+            $this->setPagAtual($pagina);
+        }else{
+            echo "<p>Livro {$this->getTitulo()} ainda está fechado, não pode ser folheado!</p>";
+        }
     }
 
     public function avancarPag(){
-
+        if ($this->getAberto() && $this->pagAtual<$this->totPaginas){
+            echo "<p>Página avançada, página atual agora é {$this->getPagAtual()}</p>";
+            $this->setPagAtual($this->getPagAtual()+1);
+        }
+        else if (!$this->getAberto())
+            echo "<p>Não foi possível avançar página, livro não está aberto!</p>";
+        else
+            echo "<p>Livro já está na última página!</p>";
     }
 
     public function voltarPag(){
-
+        if ($this->getAberto() && $this->pagAtual>1){
+            echo "<p>Página voltada, página atual agora é {$this->getPagAtual()}</p>";
+            $this->setPagAtual($this->getPagAtual()-1);
+        }
+        else if (!$this->getAberto())
+            echo "<p>Não foi possível avançar página, livro não está aberto!</p>";
+        else
+            echo "<p>Livro está na primeira página!</p>";
     }
 
     /**
