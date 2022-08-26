@@ -17,7 +17,7 @@ class Professor extends Pessoa{
     }
 
     public function receberAum($aumento){
-        echo "<p>$this->nome,parábens pelo seu aumento de $aumento!<p>";
+        echo "<p>{$this->getNome()}, parábens pelo seu aumento de $aumento!</p>";
         $this->setSalario($this->getSalario()+$aumento);
     }
 
