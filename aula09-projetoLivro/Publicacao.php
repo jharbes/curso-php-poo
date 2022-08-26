@@ -1,6 +1,7 @@
 <?php
 
 require_once "Livro.php";
+require_once "Publicacao.php";
 require_once "Pessoa.php";
 
 interface Publicacao{

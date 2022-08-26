@@ -1,9 +1,10 @@
 <?php
 
 require_once 'Publicacao.php';
-require_once 'Pessoa.php';
+require_once "Livro.php";
+require_once "Pessoa.php";
 
-class Livro extends Publicacao{
+class Livro implements Publicacao{
     private $titulo;
     private $autor;
     private $totPaginas;
@@ -13,6 +14,26 @@ class Livro extends Publicacao{
 
     public function detalhes(){
         
+    }
+
+    public function abrir(){
+
+    }
+
+    public function fechar(){
+
+    }
+
+    public function folhear(){
+
+    }
+
+    public function avancarPag(){
+
+    }
+
+    public function voltarPag(){
+
     }
 
     /**

@@ -14,7 +14,7 @@ require_once "Livro.php";
 require_once "Publicacao.php";
 require_once "Pessoa.php";
 
-
+$pessoa[]=new Pessoa('Jorge Nami Harbes',39,'M');
   
 ?>
 </body>
