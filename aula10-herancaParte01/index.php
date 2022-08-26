@@ -25,7 +25,15 @@ $pessoa2=new Aluno("Cicciolina",25,'F',"Artes");
 $pessoa3=new Professor('Luiz Felipe Scolari',56,'M','Educação Física',40000);
 $pessoa4=new Funcionario('Ana Maria Braga',95,'F','Mídias');
 
+var_dump($pessoa1);
+var_dump($pessoa2);
+var_dump($pessoa3);
+var_dump($pessoa4);
+
 $pessoa3->receberAum(500);
+$pessoa4->mudarTrabalho();
+$pessoa2->cancelarMatr();
+$pessoa4->mudarTrabalho();
 ?>
 </body>
 </html>

@@ -19,10 +19,10 @@ class Funcionario extends Pessoa{
     public function mudarTrabalho(){
         if ($this->getTrabalhando()){
             $this->setTrabalhando(false);
-            echo "<p>$this->nome bateu seu ponto de saída!</p>";
+            echo "<p>{$this->getNome()} bateu seu ponto de saída!</p>";
         }else{
             $this->setTrabalhando(true);
-            echo "<p>$this->nome bateu seu ponto de entrada!</p>";
+            echo "<p>{$this->getNome()} bateu seu ponto de entrada!</p>";
         }
     }
 
