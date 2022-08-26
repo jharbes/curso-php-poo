@@ -28,7 +28,7 @@ class Livro implements Publicacao{
         echo "totPaginas: $this->totPaginas<br>";
         echo "pagAtual: {$this->getPagAtual()}<br>";
         echo $this->getAberto()?"aberto: SIM<br>":"aberto: NÃO<br>";
-        echo $this->getLeitor()!=null?"leitor: {$this->getLeitor()->getNome()}</p><hr>":"leitor: N/A";
+        echo $this->getLeitor()!=null?"leitor: {$this->getLeitor()->getNome()}</p><hr></h3>":"leitor: N/A</h3><hr>";
     }
 
     public function abrir(){
@@ -54,12 +54,13 @@ class Livro implements Publicacao{
     }
 
     public function folhear($pagina){
-        if ($this->getAberto()){
+        if ($this->getAberto() && $this->getTotPaginas()>=$pagina){
             echo "<p>Livro {$this->getTitulo()} agora na página de número $pagina.</p>";
             $this->setPagAtual($pagina);
-        }else{
+        }else if (!$this->getAberto()){
             echo "<p>Livro {$this->getTitulo()} ainda está fechado, não pode ser folheado!</p>";
-        }
+        }else
+            echo "<p>Página $pagina acima do número total de paginas do {$this->getTitulo()}!</p>";
     }
 
     public function avancarPag(){

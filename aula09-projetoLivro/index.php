@@ -27,6 +27,7 @@ $pessoa[]=new Pessoa('Jorge Nami Harbes',39,'M');
 $pessoa[]=new Pessoa("Carolina Ferreira Alcantara",28,'F');
 
 $livro[]=new Livro("HTML5 e CSS3",'Elizabeth Castro',150);
+$livro[]=new Livro("PHP Básico","José da Silva",300);
 $livro[0]->detalhes();
 $livro[0]->setLeitor($pessoa[0]);
 $livro[0]->abrir();
@@ -34,9 +35,13 @@ $livro[0]->detalhes();
 $livro[]=new Livro('Livro teste2','Joaozinho',50);
 $livro[1]->detalhes();
 $livro[1]->folhear(20);
-$livro[0]->folhear(35);
+$livro[0]->folhear(800);
 $livro[1]->fechar();
 $livro[0]->fechar();
+$livro[1]->setLeitor($pessoa[1]);
+
+var_dump($livro);
+$livro[1]->detalhes();
 ?>
 </body>
 </html>
