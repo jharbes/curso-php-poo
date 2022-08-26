@@ -82,7 +82,7 @@ class Livro implements Publicacao{
         else if (!$this->getAberto())
             echo "<p>Não foi possível avançar página, livro não está aberto!</p>";
         else
-            echo "<p>Livro está na primeira página!</p>";
+            echo "<p>Livro já está na primeira página, não é possível voltar!</p>";
     }
 
     /**

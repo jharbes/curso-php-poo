@@ -35,6 +35,8 @@ $livro[0]->detalhes();
 $livro[]=new Livro('Livro teste2','Joaozinho',50);
 $livro[1]->detalhes();
 $livro[1]->folhear(20);
+$livro[1]->avancarPag();
+$livro[0]->voltarPag(); 
 $livro[0]->folhear(800);
 $livro[1]->fechar();
 $livro[0]->fechar();
