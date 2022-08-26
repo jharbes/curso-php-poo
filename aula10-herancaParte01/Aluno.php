@@ -6,8 +6,17 @@ class Aluno extends Pessoa{
     private $matricula;
     private $curso;
 
-    public function cancelarMatr(){
+    public function __construct($nome,$idade,$sexo,$curso){
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+        $this->setCurso($curso);
+        $this->setMatricula(rand(10000,99999));
+        echo "<h3>Cadastro do aluno de nome {$this->getNome()} e matrícula número {$this->getMatricula()} concluído com sucesso!</h3>";
+    }
 
+    public function cancelarMatr(){
+        echo "<p>Matrícula número {$this->getMatricula()} pertencente à {$this->getNome()} cancelada com sucesso!</p>";
     }
 
     /**

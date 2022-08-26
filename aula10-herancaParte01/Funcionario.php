@@ -6,11 +6,25 @@ class Funcionario extends Pessoa{
     private $setor;
     private $trabalhando;
 
-    public function mudarTrabalho(){
-
+    public function __construct($nome,$idade,$sexo,$setor)
+    {
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+        $this->trabalhando=false;
+        $this->setor=$setor;
+        echo "<h3>Cadastro do funcionário de nome {$this->getNome()} concluído com sucesso!</h3>";
     }
 
-    
+    public function mudarTrabalho(){
+        if ($this->getTrabalhando()){
+            $this->setTrabalhando(false);
+            echo "<p>$this->nome bateu seu ponto de saída!</p>";
+        }else{
+            $this->setTrabalhando(true);
+            echo "<p>$this->nome bateu seu ponto de entrada!</p>";
+        }
+    }
 
     /**
      * Get the value of setor

@@ -9,6 +9,14 @@ class Pessoa{
     private $idade;
     private $sexo;
 
+    public function __construct($nome,$idade,$sexo)
+    {
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+        echo "<h3>Cadastro de pessoa de nome {$this->getNome()} concluído com sucesso!</h3>";
+    }
+
     public function fazerAniv(){
         echo "<p>Parabéns pelo seu aniversário {$this->getNome()}!</p>";
         $this->idade++;

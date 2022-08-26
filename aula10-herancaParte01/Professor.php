@@ -6,11 +6,20 @@ class Professor extends Pessoa{
     private $especialidade;
     private $salario;
 
-    public function receberAum(){
-
+    public function __construct($nome,$idade,$sexo,$especialidade,$salario)
+    {
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+        $this->especialidade=$especialidade;
+        $this->salario=$salario;
+        echo "<h3>Cadastro do professor de nome {$this->getNome()} e especialidade {$this->getEspecialidade()} concluído com sucesso!</h3>";
     }
 
-    
+    public function receberAum($aumento){
+        echo "<p>$this->nome,parábens pelo seu aumento de $aumento!<p>";
+        $this->setSalario($this->getSalario()+$aumento);
+    }
 
     /**
      * Get the value of especialidade
