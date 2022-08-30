@@ -33,6 +33,14 @@ $a[0]->pagarMensalidade();
 $t[]=new Tecnico('Juanita Cabrona',25,'F','Eletrotecnica',750);
 $t[0]->praticar();
 
+$b[0]->fazerAniv();
+
+$v[]=new Visitante;
+$v[0]->setNome('Carolina Alcantara');
+$v[0]->setIdade(28);
+$v[0]->setSexo('F');
+var_dump($v[0]);
+
 ?>
 </body>
 </html>
