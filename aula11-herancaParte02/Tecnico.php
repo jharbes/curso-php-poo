@@ -17,7 +17,7 @@ class Tecnico extends Aluno{
         echo "<h3>Cadastro do aluno de nome {$this->getNome()}, matrícula número {$this->getMatricula()} e registro profissional de Nº{$this->getRegistroProfissional()} concluído com sucesso!</h3>";
     }
 
-    public function praticar(){
+    public final function praticar(){
         echo "<p>Profissional técnico {$this->getNome()} de registro profissional Nº{$this->getRegistroProfissional()} praticou na data de hoje</p>";
     }
 
