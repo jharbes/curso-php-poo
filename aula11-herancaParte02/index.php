@@ -17,6 +17,11 @@ require_once 'Professor.php';
 require_once 'Bolsista.php';
 require_once 'Tecnico.php';
 
+$b[]=new Bolsista('Apollo Miranda',17,'M','Economia',50,600);
+$b[0]->pagarMensalidade();
+
+$a[]=new Aluno('Jorge Harbes',18,'M','TI',800);
+$a[0]->pagarMensalidade();
 
 ?>
 </body>

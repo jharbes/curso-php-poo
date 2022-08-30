@@ -9,12 +9,13 @@ class Aluno extends Pessoa{
     private $curso;
     private $mensalidade;
 
-    public function __construct($nome,$idade,$sexo,$curso){
+    public function __construct($nome,$idade,$sexo,$curso,$mensalidade){
         $this->setNome($nome);
         $this->setIdade($idade);
         $this->setSexo($sexo);
         $this->setCurso($curso);
         $this->setMatricula(rand(10000,99999));
+        $this->setMensalidade($mensalidade);
         echo "<h3>Cadastro do aluno de nome {$this->getNome()} e matrícula número {$this->getMatricula()} concluído com sucesso!</h3>";
     }
 
