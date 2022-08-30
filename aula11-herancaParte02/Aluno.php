@@ -5,9 +5,9 @@ require_once 'Bolsista.php';
 require_once 'Tecnico.php';
 
 class Aluno extends Pessoa{
-    private $matricula;
-    private $curso;
-    private $mensalidade;
+    protected $matricula;
+    protected $curso;
+    protected $mensalidade;
 
     public function __construct($nome,$idade,$sexo,$curso,$mensalidade){
         $this->setNome($nome);
@@ -16,7 +16,7 @@ class Aluno extends Pessoa{
         $this->setCurso($curso);
         $this->setMatricula(rand(10000,99999));
         $this->setMensalidade($mensalidade);
-        echo "<h3>Cadastro do aluno de nome {$this->getNome()} e matrícula número {$this->getMatricula()} concluído com sucesso!</h3>";
+        echo "<h3>Cadastro do aluno de nome <strong>{$this->getNome()}</strong> de matrícula número {$this->getMatricula()} concluído com sucesso!</h3>";
     }
 
     public function pagarMensalidade(){

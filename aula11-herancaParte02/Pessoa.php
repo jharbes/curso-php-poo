@@ -7,12 +7,12 @@ require_once 'Bolsista.php';
 require_once 'Tecnico.php';
 
 abstract class Pessoa{
-    private $nome;
-    private $idade;
-    private $sexo;
+    protected $nome;
+    protected $idade;
+    protected $sexo;
 
     final public function fazerAniv(){
-        echo "<p>Parabéns pelo seu aniversário {$this->getNome()}!</p>";
+        echo "<p>Parabéns pelo seu aniversário <strong>{$this->getNome()}</strong>!</p>";
         $this->idade++;
     }
 

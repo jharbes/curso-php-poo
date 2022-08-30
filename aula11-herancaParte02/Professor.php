@@ -13,7 +13,7 @@ class Professor extends Pessoa{
         $this->setSexo($sexo);
         $this->especialidade=$especialidade;
         $this->salario=$salario;
-        echo "<h3>Cadastro do professor de nome {$this->getNome()} e especialidade {$this->getEspecialidade()} concluído com sucesso!</h3>";
+        echo "<h3>Cadastro do professor de nome <strong>{$this->getNome()}</strong> e especialidade <strong>{$this->getEspecialidade()}</strong> concluído com sucesso!</h3>";
     }
 
     public function receberAum($aumento){

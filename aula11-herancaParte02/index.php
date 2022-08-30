@@ -9,6 +9,11 @@
         p{
             border: 1px solid black;
             width: fit-content;
+            color: yellowgreen;
+            background-color: black;
+        }
+        strong{
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -42,6 +47,9 @@ $v[0]->setSexo('F');
 var_dump($v[0]);
 
 $v[0]->fazerAniv();
+
+$p[]=new Professor('Stephen Hawking',45,'M','Física',8000);
+$p[0]->receberAum(800);
 
 ?>
 </body>
