@@ -11,7 +11,7 @@ abstract class Pessoa{
     private $idade;
     private $sexo;
 
-    public function fazerAniv(){
+    final public function fazerAniv(){
         echo "<p>Parabéns pelo seu aniversário {$this->getNome()}!</p>";
         $this->idade++;
     }
