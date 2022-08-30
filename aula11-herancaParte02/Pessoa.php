@@ -6,7 +6,7 @@ require_once 'Professor.php';
 require_once 'Bolsista.php';
 require_once 'Tecnico.php';
 
-class Pessoa{
+abstract class Pessoa{
     private $nome;
     private $idade;
     private $sexo;
