@@ -35,7 +35,7 @@ $t[0]->praticar();
 
 $b[0]->fazerAniv();
 
-$v[]=new Visitante;
+$v[]=new Visitante();
 $v[0]->setNome('Carolina Alcantara');
 $v[0]->setIdade(28);
 $v[0]->setSexo('F');
