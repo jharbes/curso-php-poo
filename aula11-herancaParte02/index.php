@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        p{
+            border: 1px solid black;
+            width: fit-content;
+        }
+    </style>
 </head>
 <body>
 <h1>Curso de PHP-POO</h1>
@@ -19,9 +25,13 @@ require_once 'Tecnico.php';
 
 $b[]=new Bolsista('Apollo Miranda',17,'M','Economia',50,600);
 $b[0]->pagarMensalidade();
+$b[0]->renovarBolsa();
 
 $a[]=new Aluno('Jorge Harbes',18,'M','TI',800);
 $a[0]->pagarMensalidade();
+
+$t[]=new Tecnico('Juanita Cabrona',25,'F','Eletrotecnica',750);
+$t[0]->praticar();
 
 ?>
 </body>

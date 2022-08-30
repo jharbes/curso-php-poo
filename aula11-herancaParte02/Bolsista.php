@@ -19,11 +19,11 @@ class Bolsista extends Aluno{
     }
 
     public function renovarBolsa(){
-        echo "<p>Bolsa do aluno {$this->getNome()} de matrícula [$this->getMatricula()} renovada com sucesso!</p>";
+        echo "<p>Bolsa do aluno {$this->getNome()} de matrícula {$this->getMatricula()} no percentual de {$this->getBolsa()}% renovada com sucesso!</p>";
     }
 
     public function pagarMensalidade(){
-        echo "<p>Aluno {$this->getNome()} de matrícula {$this->getMatricula()} pagou sua mensalidade no valor de R$",$this->getMensalidade()-$this->getMensalidade()*$this->getBolsa()/100,"</p>";
+        echo "<p>Aluno {$this->getNome()} de matrícula {$this->getMatricula()} pagou sua mensalidade com desconto no valor de R$",$this->getMensalidade()-$this->getMensalidade()*$this->getBolsa()/100,"</p>";
     }
 
     /**
