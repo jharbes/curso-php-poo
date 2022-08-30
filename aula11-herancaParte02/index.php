@@ -41,6 +41,8 @@ $v[0]->setIdade(28);
 $v[0]->setSexo('F');
 var_dump($v[0]);
 
+$v[0]->fazerAniv();
+
 ?>
 </body>
 </html>
