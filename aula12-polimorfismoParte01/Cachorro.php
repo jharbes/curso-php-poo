@@ -8,7 +8,12 @@ class Cachorro extends Mamifero{
     {
         echo "<h3>Cachorro criado!</h3>";
     }
-    
+
+    public function emitirSom()
+    {
+        echo "<p>Cachorro latindo!</p>";
+    }
+
     public function enterrarOsso(){
         echo "<p>Cachorro enterrou osso!</p>";
     }
