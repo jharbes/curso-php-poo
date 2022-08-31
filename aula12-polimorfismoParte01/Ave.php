@@ -18,6 +18,10 @@ class Ave extends Animal{
         echo "<p>Som de ave!</p>";
     }
 
+    public function fazerNinho(){
+        echo "<p>Fazendo Ninho!</p>";
+    }
+
     /**
      * Get the value of corPena
      */ 
