@@ -1,7 +1,14 @@
 <?php
 
+require_once 'Animal.php';
+
 class Ave extends Animal{
     private $corPena;
+
+    public function __construct()
+    {
+        echo "<h3>Ave criada!</h3>";
+    }
 
     public function locomover()
     {

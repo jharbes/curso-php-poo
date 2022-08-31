@@ -1,7 +1,14 @@
 <?php
 
+require_once 'Animal.php';
+
 class Reptil extends Animal{
     private $corEscama;
+
+    public function __construct()
+    {
+        echo "<h3>Réptil criado!</h3>";
+    }
 
     public function locomover()
     {

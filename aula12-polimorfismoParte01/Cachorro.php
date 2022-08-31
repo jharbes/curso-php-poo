@@ -1,6 +1,14 @@
 <?php
 
+require_once 'Mamifero.php';
+
 class Cachorro extends Mamifero{
+
+    public function __construct()
+    {
+        echo "<h3>Cachorro criado!</h3>";
+    }
+    
     public function enterrarOsso(){
         echo "<p>Cachorro enterrou osso!</p>";
     }

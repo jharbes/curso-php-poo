@@ -9,7 +9,20 @@
 <body>
 <h1>Curso de PHP-POO</h1>
 <?php
+    require_once 'Mamifero.php';
+    require_once 'Reptil.php';
+    require_once 'Peixe.php';
+    require_once 'Ave.php';
+    require_once 'Canguru.php';
+    require_once 'Cachorro.php';
+    require_once 'Tartaruga.php';
+    require_once 'Arara.php';
+    require_once 'Cobra.php';
+    require_once 'Goldfish.php';
 
+    $m1=new Mamifero;
+    $r1=new Reptil;
+    $t1=new Tartaruga;
 ?>
 </body>
 </html>
