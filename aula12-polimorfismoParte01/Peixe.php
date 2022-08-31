@@ -18,6 +18,10 @@ class Peixe extends Animal{
         echo "<p>Peixe não faz som!</p>";
     }
 
+    public function soltarBolha(){
+        echo "<p>Peixe soltando bolha!</p>";
+    }
+
     /**
      * Get the value of corEscama
      */ 
