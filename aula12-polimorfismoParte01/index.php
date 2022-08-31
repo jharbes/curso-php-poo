@@ -9,7 +9,7 @@
 <body>
 <h1>Curso de PHP-POO</h1>
 <?php
-  
+
 ?>
 </body>
 </html>

@@ -1,6 +1,6 @@
 <?php
 
-class Peixe extends Animal{
+class Ave extends Animal{
 
 }
 
