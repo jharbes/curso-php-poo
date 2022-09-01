@@ -15,7 +15,14 @@ require_once 'Mamifero.php';
 require_once 'Lobo.php';
 require_once 'Cachorro.php';
 
+$c=new Mamifero;
+$c->emitirSom();
 
+$k=new Cachorro;
+$k->emitirSom();
+
+$l=new Lobo;
+$l->emitirSom();
   
 ?>
 </body>

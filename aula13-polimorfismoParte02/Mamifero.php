@@ -9,6 +9,26 @@ class Mamifero extends Animal{
     {
         echo "<p>Som de mamífero!</p>";
     }
+
+    /**
+     * Get the value of corPelo
+     */ 
+    public function getCorPelo()
+    {
+        return $this->corPelo;
+    }
+
+    /**
+     * Set the value of corPelo
+     *
+     * @return  self
+     */ 
+    public function setCorPelo($corPelo)
+    {
+        $this->corPelo = $corPelo;
+
+        return $this;
+    }
 }
 
 ?>
