@@ -31,7 +31,20 @@ class Cachorro extends Lobo{
         else
             echo "<p>Cachorro rosnou e latiu!</p>";
     }
-    
+
+    public function reagirIdadePeso($idade,$peso){
+        if ($idade<5){
+            if ($peso<10)
+                echo "<p>Cachorro abanou!</p>";
+            else
+                echo "<p>Cachorro latiu!</p>";
+        }else{
+            if ($peso<10)
+                echo "<p>Cachorro rosnou!</p>";
+            else
+                echo "<p>Cachorro ignorou você!</p>";
+        }
+    }
 }
 
 ?>

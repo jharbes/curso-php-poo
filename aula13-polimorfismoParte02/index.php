@@ -31,6 +31,9 @@ $k->reagirHora(4,10);
 
 $k->reagirDono(true);
 $k->reagirDono(false);
+
+$k->reagirIdadePeso(2,30);
+$k->reagirIdadePeso(8,5);
   
 ?>
 </body>
