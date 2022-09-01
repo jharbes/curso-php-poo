@@ -8,6 +8,30 @@ class Cachorro extends Lobo{
     {
         echo "<p>Au! Au! Au!</p>";
     }
+
+    public function reagirFrase($frase){
+        if ($frase=='Toma comida' || $frase=='Olá')
+            echo "<p>Cachorro abanou e latiu!</p>";
+        else
+            echo "<p>Cachorro rosnou!!</p>";
+    }
+
+    public function reagirHora($hora,$min){
+        if ($hora<12)
+            echo "<p>Cachorro abanou o rabo!</p>";
+        else if ($hora<=18)
+            echo "<p>Cachorro abanou o rabo e latiu!</p>";
+        else
+            echo "<p>Cachorro ignorou você!</p>";
+    }
+
+    public function reagirDono($dono){
+        if ($dono)
+            echo "<p>Cachorro abanou o rabo!</p>";
+        else
+            echo "<p>Cachorro rosnou e latiu!</p>";
+    }
+    
 }
 
 ?>

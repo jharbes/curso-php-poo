@@ -23,6 +23,14 @@ $k->emitirSom();
 
 $l=new Lobo;
 $l->emitirSom();
+
+$k->reagirFrase("Olá");
+$k->reagirFrase("oi");
+
+$k->reagirHora(4,10);
+
+$k->reagirDono(true);
+$k->reagirDono(false);
   
 ?>
 </body>
