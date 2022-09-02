@@ -38,7 +38,8 @@ class Video implements AcoesVideo{
     }
 
     public function like(){
-        
+        $this->setCurtidas($this->getCurtidas()+1);
+        echo "<p>Você curtiu o vídeo $this->nome!</p>";
     }
 
     /**

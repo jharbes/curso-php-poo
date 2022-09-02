@@ -19,7 +19,11 @@ $v[]=new Video('Aula 1 de POO');
 $v[]=new Video("Aula 12 de PHP");
 $v[]=new Video('Aula 15 de HTML');
 
+$g[]=new Gafanhoto('Jorge Nami Harbes',39,'M','jharbes');
+$g[]=new Gafanhoto('Carolina Ferreira Alcantara',28,'F','carolalcantara');
+
 var_dump($v);
+var_dump($g);
 
 ?>
 </body>

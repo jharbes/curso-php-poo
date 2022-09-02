@@ -6,8 +6,9 @@ abstract class Pessoa{
     protected $sexo;
     protected $experiencia;
 
-    protected function ganharExp(){
-        
+    protected function ganharExp($n){
+        $this->setExperiencia($this->getExperiencia()+$n);
+        echo "<p>$this->nome ganhou $n ponto(s) de experiência!</p>";
     }
 
     /**

@@ -7,16 +7,23 @@ class Gafanhoto extends Pessoa{
     private $login;
     private $totAssistido;
 
-    public function __construct($nome,$idade,$sexo){
+    public function __construct($nome,$idade,$sexo,$login){
+        // caso a superclasse Pessoa tivesse um construtor poderiamos aproveitar seus dados com
+        // o comando parent::__construct($nome,$idade,$sexo); aí então utilizaríamos as linhas do
+        // construtor da superclasse, no entanto ainda teríamos que pedir $nome,$idade e $sexo nesse
+        // construtor da classe Gafanhoto
         $this->setNome($nome);
         $this->setIdade($idade);
         $this->setSexo($sexo);
+        $this->setLogin($login);
         $this->setTotAssistido(0);
         $this->setExperiencia(0);
+        echo "<h3>$this->nome é o mais novo gafanhoto!</h3>";
     }
 
     public function viuMaisUm(){
-        
+        $this->totAssistido++;
+        echo "<p>$this->nome assistiu mais um vídeo!</p>";
     }
 
     /**
