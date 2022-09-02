@@ -12,6 +12,10 @@
 
 require_once 'AcoesVideo.php';
 require_once 'Video.php';
+require_once 'Pessoa.php';
+require_once 'Gafanhoto.php';
+
+
 
 ?>
 </body>

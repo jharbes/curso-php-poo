@@ -9,12 +9,32 @@ class Video implements AcoesVideo{
     private $curtidas;
     private $reproduzindo;
 
-    public function play(){
+    public function __construct($titulo)    
+    {
+        $this->setTitulo($titulo);
+        $this->setAvaliacao(0);
+        $this->setViews(0);
+        $this->setCurtidas(0);
+        $this->setReproduzindo(false);
+        echo "<h3>Video $this->titulo incluído no inventário!</h3>";
+    }
 
+    public function play(){
+        if ($this->getReproduzindo())
+            echo "<p>Vídeo já está reproduzindo, Comando negado!</p>";
+        else{
+            $this->setReproduzindo(true);
+            echo "<p><strong>PLAY ></strong></p>";
+        }
     }
 
     public function pause(){
-
+        if (!$this->getReproduzindo())
+            echo "<p>Vídeo já está pausado, Comando negado!</p>";
+        else{
+            $this->setReproduzindo(true);
+            echo "<p><strong>PAUSE ||</strong></p>";
+        }
     }
 
     public function like(){

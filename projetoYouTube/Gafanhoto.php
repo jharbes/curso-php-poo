@@ -1,10 +1,17 @@
 <?php
 
 require_once 'Pessoa.php';
+require_once 'Video.php';
 
 class Gafanhoto extends Pessoa{
     private $login;
     private $totAssistido;
+
+    public function Gafanhoto($nome,$idade,$sexo){
+        $this->setNome($nome);
+        $this->setIdade($idade);
+        $this->setSexo($sexo);
+    }
 
     public function viuMaisUm(){
         
