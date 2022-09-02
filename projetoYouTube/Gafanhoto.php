@@ -7,10 +7,12 @@ class Gafanhoto extends Pessoa{
     private $login;
     private $totAssistido;
 
-    public function Gafanhoto($nome,$idade,$sexo){
+    public function __construct($nome,$idade,$sexo){
         $this->setNome($nome);
         $this->setIdade($idade);
         $this->setSexo($sexo);
+        $this->setTotAssistido(0);
+        $this->setExperiencia(0);
     }
 
     public function viuMaisUm(){

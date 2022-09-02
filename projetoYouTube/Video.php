@@ -12,7 +12,7 @@ class Video implements AcoesVideo{
     public function __construct($titulo)    
     {
         $this->setTitulo($titulo);
-        $this->setAvaliacao(0);
+        $this->setAvaliacao(1);
         $this->setViews(0);
         $this->setCurtidas(0);
         $this->setReproduzindo(false);

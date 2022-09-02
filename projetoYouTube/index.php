@@ -15,7 +15,11 @@ require_once 'Video.php';
 require_once 'Pessoa.php';
 require_once 'Gafanhoto.php';
 
+$v[]=new Video('Aula 1 de POO');
+$v[]=new Video("Aula 12 de PHP");
+$v[]=new Video('Aula 15 de HTML');
 
+var_dump($v);
 
 ?>
 </body>
