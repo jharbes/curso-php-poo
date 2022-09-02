@@ -9,7 +9,10 @@
 <body>
 <h1>Curso de PHP-POO</h1>
 <?php
-  
+
+require_once 'AcoesVideo.php';
+require_once 'Video.php';
+
 ?>
 </body>
 </html>

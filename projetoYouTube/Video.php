@@ -94,7 +94,7 @@ class Video implements AcoesVideo{
      *
      * @return  self
      */ 
-    public function setCurtidas($curtidas)
+    private function setCurtidas($curtidas)
     {
         $this->curtidas = $curtidas;
 
@@ -114,7 +114,7 @@ class Video implements AcoesVideo{
      *
      * @return  self
      */ 
-    public function setReproduzindo($reproduzindo)
+    private function setReproduzindo($reproduzindo)
     {
         $this->reproduzindo = $reproduzindo;
 
