@@ -1,8 +1,20 @@
 <?php
 
+require_once 'Video.php';
+require_once 'Gafanhoto.php';
+
 class Visualizacao{
     private $espectador;
     private $filme;
+
+    public function __construct($espectador,$filme)
+    {
+        $this->setEspectador($espectador);
+        $this->setFilme($filme);
+        $this->getFilme()->setViews($this->getFilme()->getViews()+1);
+        $this->getEspectador()->setTotAssistido($this->getEspectador()->getTotAssistido()+1);
+        echo "<h3>{$this->getEspectador()->getNome()} assistiu o vídeo {$this->getFilme()->getTitulo()}";
+    }
 
     public function avaliar(){
 
