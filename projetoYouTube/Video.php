@@ -12,7 +12,7 @@ class Video implements AcoesVideo{
     public function __construct($titulo)    
     {
         $this->setTitulo($titulo);
-        $this->setAvaliacao(1);
+        $this->avaliacao=0;
         $this->setViews(0);
         $this->setCurtidas(0);
         $this->setReproduzindo(false);
@@ -77,7 +77,7 @@ class Video implements AcoesVideo{
      */ 
     public function setAvaliacao($avaliacao)
     {
-        $this->avaliacao = $avaliacao;
+        $this->avaliacao = (($this->views-1)*$this->avaliacao + $avaliacao)/$this->views;
 
         return $this;
     }

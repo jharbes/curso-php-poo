@@ -17,15 +17,22 @@ class Visualizacao{
     }
 
     public function avaliar(){
-
+        $this->getFilme()->setAvaliacao(5);
     }
 
     public function avaliarNota($nota){
-
+        $this->getFilme()->setAvaliacao($nota);
     }
 
     public function avaliarPorcentagem($porcentagem){
-        
+        if ($porcentagem<=20)
+            $this->getFilme()->setAvaliacao(3);
+        else if ($porcentagem<=50)
+            $this->getFilme()->setAvaliacao(5);
+        else if ($porcentagem<=90)
+            $this->getFilme()->setAvaliacao(8);
+        else
+            $this->getFilme()->setAvaliacao(10);
     }
 
     /**
